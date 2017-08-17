@@ -1,0 +1,14 @@
+
+extends ../../../templates/master.pug
+
+block content
+    h1.title
+      a(href='/home') My Forum
+    hr
+    h3.title Edit a Category:
+    form(method="POST" action="/edit")
+        .field
+            .control
+                input.input(type="text" placeholder="Category ID" name="id")
+                input.input(type="text" placeholder="Category Name" name="category")
+        input(type="submit" value="Edit")

@@ -1,0 +1,24 @@
+
+extends ../../../templates/master.pug
+
+block content
+    h1.title
+      a(href='/home') My Forum
+    hr
+    each category in categorytab
+      h3.title #{category.categoryname}
+    p
+      | |&nbsp
+      a(href='/posts/add') Add a Post
+      |  |&nbsp
+      a(href='/posts/edit') Edit a Post
+      |  |&nbsp
+      a(href='/posts/del') Delete a Post
+      |  |
+    hr
+
+    each post in posttab
+      h3.title Title : #{post.p_title}
+      p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
+      p #{post.p_content}
+      hr

@@ -1,0 +1,25 @@
+DB name= forumdb
+
+Note: All fields should be set to NOT NULL
+
+DB table= useraccount
+<PK> username		- varchar
+   - password		- varchar
+   - email		- varchar
+   - birthdate		- varchar
+   - usertype		- varchar
+   - loggedin		- varchar
+
+DB table= categorytab
+<PK> id			- int		- Auto_Increment
+   - categoryname	- varchar
+   - opened		- varchar
+
+DB table= post
+<PK> id			- int		- Auto_Increment
+   - author		- varchar
+   - p_category		- varchar
+   - p_title		- varchar
+   - p_content		- varchar
+   - p_date		- varchar
+   - edit		- varchar

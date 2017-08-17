@@ -1,0 +1,17 @@
+
+extends ../../../templates/master.pug
+
+block content
+    h1.title Welcome To My Forum!
+    hr
+    h3.title Sign In:
+    form(method="POST" action="/login")
+        .field
+            .control
+                input.input(type="text" placeholder="Username" name="username")
+        .field
+            .control
+                input.input(type="password" placeholder="Password" name="password")
+        input(type="submit" value="Sign-in")
+    hr
+    a(class="button", href="/register") REGISTER
