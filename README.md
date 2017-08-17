@@ -14,7 +14,7 @@ Instructions:
 
 > Create a User within the database with usertype='admin'
 
-> Details on Database is in forumdb.txt
+> Details on Database are in forumdb.txt
 
 Notes:
 
