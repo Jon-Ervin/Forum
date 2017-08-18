@@ -1,0 +1,11 @@
+
+extends ../../../templates/master.pug
+
+block content
+    h1.title
+      a(href='/home') My Forum
+    hr
+    each category in categorytab
+      h3.title
+        a(href='/posts') #{category.categoryname}
+    p You are not authorized to perform this action.

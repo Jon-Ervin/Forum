@@ -1,0 +1,22 @@
+
+extends ../../../templates/master.pug
+
+block content
+    h1.title
+      a(href='/home') My Forum
+    hr
+    each category in categorytab
+      h3.title
+        a(href='/posts') #{category.categoryname}
+
+    form(method="POST" action="/posts/add")
+        .field
+            .control
+                input.input(type="text" placeholder="Title" name="title")
+        .field
+            .control
+                input.input(type="text" placeholder="Date" name="date")
+        .field
+            .control
+                input.input(type="text" placeholder="Content" name="content")
+        input(type="submit" value="Add")
