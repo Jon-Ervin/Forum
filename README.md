@@ -18,9 +18,9 @@ Instructions:
 
 Notes:
 
-> Some pages recieving invalid inputs will simply reload.
+> See .env file first.
 
-> DB_PASSWORD=
+> Some pages recieving invalid inputs will simply reload.
 
 PIN POST FORUM
 
