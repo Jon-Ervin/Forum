@@ -26,5 +26,5 @@ PIN POST FORUM
 
 > Same program but with Pin Post Feature. 
 
-> New column added in post table ( see forumdb.txt inside PIN POST Table folder ).
+> New column added in post table ( see forumdb.txt inside PIN POST Forum folder ).
 
