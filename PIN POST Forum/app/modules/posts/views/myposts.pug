@@ -8,24 +8,31 @@ block content
     each category in categorytab
       h3.title
         a(href='/posts') #{category.categoryname}
-
-    form(method="POST" action="/posts/edit")
-        .field
-            .control
-                input.input(type="number" placeholder="Insert a Post ID (PID)" name="pid")
-        input(type="submit" value="Edit")
-
     hr
     h3.title My Posts:
     br
     each post in mypinposttab
       p < PINNED POST >
       h3.title Title : #{post.p_title}
+      if post.loggedin == 'true'
+        p
+          | |&nbsp
+          a(href='/posts/del/'+ post.id) Delete Post
+          |  |&nbsp
+          a(href='/posts/edit/'+ post.id) Edit Post
+          |  |
       p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
       p #{post.p_content}
       hr
     each post in myposttab
       h3.title Title : #{post.p_title}
+      if post.loggedin == 'true'
+        p
+          | |&nbsp
+          a(href='/posts/del/'+ post.id) Delete Post
+          |  |&nbsp
+          a(href='/posts/edit/'+ post.id) Edit Post
+          |  |
       p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
       p #{post.p_content}
       hr

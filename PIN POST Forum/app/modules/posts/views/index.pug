@@ -9,25 +9,38 @@ block content
       h3.title #{category.categoryname}
     p
       | |&nbsp
+      a(href='/posts/myposts') My Posts
+      |  |&nbsp
       a(href='/posts/add') Add a Post
       |  |&nbsp
-      a(href='/posts/edit') Edit a Post
-      |  |&nbsp
-      a(href='/posts/del') Delete a Post
-      |  |&nbsp
-      a(href='/posts/pin') Pin a Post (Admin Only)
-      |  |&nbsp
-      a(href='/posts/unpin') Unpin a Post (Admin Only)
-      |  |
     hr
-    each post in pinposttab
-      p < PINNED POST >
-      h3.title Title : #{post.p_title}
-      p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
-      p #{post.p_content}
-      hr
-    each post in posttab
-      h3.title Title : #{post.p_title}
-      p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
-      p #{post.p_content}
-      hr
+    each type in utype
+      each post in pinposttab
+        p < PINNED POST >
+        h3.title Title : #{post.p_title}
+        if type.usertype == 'admin'
+          a(href='/posts/unpin/'+ post.id) > Unpin Post
+        if post.loggedin == 'true'
+          p
+            | |&nbsp
+            a(href='/posts/del/'+ post.id) Delete Post
+            |  |&nbsp
+            a(href='/posts/edit/'+ post.id) Edit Post
+            |  |
+        p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
+        p #{post.p_content}
+        hr
+      each post in posttab
+        h3.title Title : #{post.p_title}
+        if type.usertype == 'admin'
+          a(href='/posts/pin/'+ post.id) > Pin Post
+        if post.loggedin == 'true'
+          p
+            | |&nbsp
+            a(href='/posts/del/'+ post.id) Delete Post
+            |  |&nbsp
+            a(href='/posts/edit/'+ post.id) Edit Post
+            |  |
+        p < PID : #{post.id} // Author : #{post.author} ( #{post.email} ) // Date : #{post.p_date} >
+        p #{post.p_content}
+        hr
