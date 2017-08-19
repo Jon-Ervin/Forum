@@ -16,6 +16,8 @@ Instructions:
 
 > Details on Database are in forumdb.txt.
 
+> Starting route: localhost:3000/login
+
 Notes:
 
 > See .env file first.
