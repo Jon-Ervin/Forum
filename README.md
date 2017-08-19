@@ -24,9 +24,6 @@ Notes:
 
 > Some pages recieving invalid inputs will simply reload.
 
-PIN POST FORUM
+Additional Feature:
 
-> Same program but with Pin Post Feature. 
-
-> New column added in post table ( see forumdb.txt inside PIN POST Forum folder ).
-
+> This Forum contains Pin/Unpin Post Feature for admin accounts. 
